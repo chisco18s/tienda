@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Buttershine Serif ;
+    src: url(./tipografia/BUTTERSHINE\ SERIF.otf);
+    font-style: normal;
+
+}
+.nombre-empresa{
+    text-shadow: 1px 1px 3px rgb(255, 129, 129);
+}
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: rgba(245, 245, 245, 0.664);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imagen{
+    font-family: sans-serif;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    background-image:url(./img/tumblr_f7f89ffb7d912a9d304c65fc3b5b77a8_a9704f51_500.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;   
+}
+nav a:hover{
+    color:rgb(250, 114, 114)
+}
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+        
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(240, 255, 255, 0.5);
+}
+.logo{
+    font-size: 25px;
+    color: black;
+    font-weight: 100;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;
+    margin: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.body{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+.grid{
+    
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+
+}
+ .caja{
+    width: 150px;
+    height: 150px;
+    border: 4px solid rgb(255, 127, 127);
+    background-color: rgba(240, 248, 255, 0.295);
+    margin: 15px;
+    text-align: center;
+    line-height: 150px;
+    float: left; /* este es el responsable de todo*/
+    background-image:url(https://c8.alamy.com/compes/2bnkad2/vector-dibujo-a-mano-elementos-de-costura-ilustracion-2bnkad2.jpg);
+ }
+
+ .final{
+    text-align: center;
+    text-size-adjust: 100000px;
+ }
+
+ .mente{
+    width: 100px;
+    height:100px;
+    color: aliceblue;
+    text-align: justify;
+    background-color: rgba(255, 214, 214, 0);
+    width: 100%;
+    height: 100%;
+ }
+
+
+ div {
+    border: 1px solid gray;
+    padding: 8px;
+  }
+  
+  h1 {
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff7c7c;
+  }
+  
+  p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #008CBA;
+  }
+
+  .narnia{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carusa{
+    width: 75%;
+    height: 75%;
+    margin: 0;
+  }
+ 
+

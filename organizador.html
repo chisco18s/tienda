@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Organizer</title>
+    <style>
+      /* Task container */
+      .task {
+        border: 1px solid #ddd;
+        padding: 8px;
+        margin-bottom: 8px;
+        position: relative;
+        transition: background-color 0.2s ease;
+      }
+
+      /* Completed task */
+      .task.completed {
+        background-color: #f2f2f2;
+        text-decoration: line-through;
+      }
+
+      /* Task note */
+      .task-note {
+        font-size: 12px;
+        margin-top: 8px;
+      }
+
+      /* Task date and time */
+      .task-due {
+        font-size: 12px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+      }
+
+      /* Task checkbox */
+      .task-checkbox {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task Organizer</h1>
+    <form>
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name">
+
+    <br>
+      <label for="task-note">Note:</label>
+      <textarea id="task-note"></textarea>
+      <br>
+      <label for="task-color">Color:</label>
+      <input type="color" id="task-color">
+      <br>
+      <label for="task-due-date">Due Date:</label>
+      <input type="date" id="task-due-date">
+      <br>
+      <label for="task-due-time">Due Time:</label>
+      <input type="time" id="task-due-time">
+      <br>
+      <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+    <div id="task-list"></div>
+    <script>
+      var taskList = document.getElementById("task-list");
+      function addTask() {
+        // Get task details from form
+        var taskName = document.getElementById("task-name").value;
+        var taskNote = document.getElementById("task-note").value;
+        var taskColor = document.getElementById("task-color").value;
+        var taskDueDate = document.getElement
+        var taskDueTime = document.getElementById("task-due-time").value;
+
+        // Create task element
+        var task = document.createElement("div");
+        task.classList.add("task");
+        task.style.backgroundColor = taskColor;
+
+        // Create task checkbox
+        var taskCheckbox = document.createElement("input");
+        taskCheckbox.type = "checkbox";
+        taskCheckbox.classList.add("task-checkbox");
+        taskCheckbox.onchange = function() {
+          task.classList.toggle("completed");
+        }
+        task.appendChild(taskCheckbox);
+
+        // Create task name element
+        var taskNameElement = document.createElement("span");
+        taskNameElement.innerHTML = taskName;
+        task.appendChild(taskNameElement);
+
+        // Create task note element
+        var taskNoteElement = document.createElement("div");
+        taskNoteElement.classList.add("task-note");
+        taskNoteElement.innerHTML = taskNote;
+        task.appendChild(taskNoteElement);
+
+        // Create task due date and time element
+        var taskDueElement = document.createElement("div");
+        taskDueElement.classList.add("task-due");
+        taskDueElement.innerHTML = "Due: " + taskDueDate + " at " + taskDueTime;
+        task.appendChild(taskDueElement);
+
+        // Add task to task list
+        taskList.appendChild(task);
+
+        // Clear form
+        document.getElementById("task-name").value = "";
+        document.getElementById("task-note").value = "";
+        document.getElementById("task-color").value = "#000000";
+        document.getElementById("task-due-date").value = "";
+        document.getElementById("task-due-time").value = "";
+      }
+    </script>
+  </body>
+</html>
+
